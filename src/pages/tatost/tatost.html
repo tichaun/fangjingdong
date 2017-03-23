@@ -1,0 +1,88 @@
+
+<ion-content class="page-tatost">
+  <div class="content">
+    <div [ngSwitch]="itemindex">
+      <ion-list *ngSwitchCase="0">
+        <ion-item>
+          <ion-thumbnail item-left>
+          <img src="{{listarray.image}}">
+          </ion-thumbnail>
+          <h2 class="pshop">{{listarray.quote}}</h2>
+          <p>商品编号{{listarray.shopnumber}}</p>
+          <ion-note item-right>
+            <button ion-button clear color="dark" (click)="dismiss()">
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+          </button>
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <p>颜色</p>
+          <div class="div1">
+            <button ion-button color="dark" class="butqaz" outline 
+            *ngFor="let it of listarray['items'];let i = index" (click)="itemclick(i,it)"
+             [ngClass]='{itembutcss: items == i}'>{{it.title}}</button>
+          </div>
+        </ion-item>
+        <ion-item>
+          <span>数量</span>
+          <ion-note item-right>
+            <button ion-button [disabled]="buthidden" clear (click)="reduce()">—</button>{{shopnum}}<button ion-button clear (click)="plus()">+</button>
+          </ion-note>
+          
+        </ion-item>
+        <ion-footer>
+          <ion-row center> 
+            <ion-col class="colleft">
+              轻松购
+            </ion-col>
+            <ion-col class="colback">
+              加入购物车
+            </ion-col>
+          </ion-row>
+        </ion-footer>
+      </ion-list>
+      <ion-list *ngSwitchCase="1">
+        <ion-item>
+          {{listarray.name}}
+          <ion-note item-right>
+            <button ion-button clear (click)="dismiss()">
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+          </button>
+          </ion-note>
+        </ion-item>
+        <ion-row center> 
+            <ion-col >
+             <img src="{{listarray.image}}" alt="">
+             <p>{{listarray.quote}}</p>
+            </ion-col>
+          </ion-row>
+      </ion-list>
+      <ion-list *ngSwitchCase="2">
+        <ion-item>
+          {{listarray.name}}
+          <ion-note item-right>
+            <button ion-button clear (click)="dismiss()">
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+          </button>
+          </ion-note>
+        </ion-item>
+        <ion-item>
+            {{listarray.quote}}
+        </ion-item>
+
+      </ion-list>
+      <ion-list *ngSwitchCase="3">
+        <ion-item>
+          {{listarray.name}}
+          <ion-note item-right>
+            <button ion-button clear (click)="dismiss()">
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+          </button>
+          </ion-note>
+        </ion-item>
+        <h2 class="pshop">{{listarray.quote}}</h2>
+      </ion-list>
+    </div>
+    
+  </div>
+</ion-content>

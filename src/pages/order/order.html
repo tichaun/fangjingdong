@@ -1,0 +1,371 @@
+<!--
+  Generated template for the Order page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar >
+    <ion-segment [(ngModel)]="segmentModel" >
+      <ion-segment-button value="0" >
+        商品
+      </ion-segment-button>
+      <ion-segment-button value="1" >
+        详情
+      </ion-segment-button>
+      <ion-segment-button value="2" >
+        评价
+      </ion-segment-button>
+    </ion-segment>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <!--<ion-toolbar no-border-top >
+    
+  </ion-toolbar>-->
+
+</ion-header>
+
+
+<ion-content padding>
+  <div [ngSwitch]="segmentModel">
+   <ion-list *ngSwitchCase="0">
+    <ion-slides #mySlider (ionSlideTap)="onSlideTap($event)" style="width: 100%;height:400px">
+      <ion-slide *ngFor="let slide of slides" >
+        <img [src]="slide.image">
+      </ion-slide>
+    </ion-slides>
+    <p>天梭(TISSOT)手表 力洛克系列机械情侣表男表T41.1.483.53</p>
+    <p class="pshop">【京东自营】年货节推荐商品 1.11 00:00开抢一口价3199元，数量有限 售完即止！</p>
+    <div>
+      <span class="pshop spanfol">￥3333.00</span>
+      <ion-buttons end>
+      <button ion-button color="light" small>降价通知</button>
+      </ion-buttons>
+    </div>
+    <ion-item class="itemleft" (click)="quan()">
+      <ion-note item-left>
+        领券
+      </ion-note>
+        <span class="spanback">&nbsp;&nbsp;满500减50&nbsp;&nbsp;</span>
+      <ion-note item-right>
+        <ion-icon name="more"></ion-icon>
+      </ion-note>
+    </ion-item>
+    <ion-item class="itemleft" (click)="promotions()">
+      <ion-note item-left >
+        促销
+      </ion-note>
+        <span class="pshop">限制</span>
+        <span>此价格不与套装优惠同时享受</span>
+      <ion-note item-right>
+        <ion-icon name="more"></ion-icon>
+      </ion-note>
+    </ion-item>
+    <ion-item class="itemleft" (click)="selected()">
+      <ion-note item-left>
+        已选
+      </ion-note>
+       {{names}}, {{numss}} 个
+      <ion-note item-right>
+        <ion-icon name="more"></ion-icon>
+      </ion-note>
+    </ion-item>
+    <ion-item class="itemleft" (click)="distribution()">
+      <ion-note item-left>
+        送至
+      </ion-note>
+        {{homecart}}
+      <ion-note item-right>
+        <ion-icon name="more"></ion-icon>
+      </ion-note>
+    </ion-item>
+  </ion-list> 
+  <ion-list *ngSwitchCase="1">
+    <ion-segment [(ngModel)]="detailsModel" >
+      <ion-segment-button value="0" >
+        商品详情
+      </ion-segment-button>
+      <ion-segment-button value="1" >
+        规格参数
+      </ion-segment-button>
+      <ion-segment-button value="2" >
+        包装售后
+      </ion-segment-button>
+    </ion-segment>
+     <div [ngSwitch]="detailsModel">
+       <ion-list *ngSwitchCase="0">
+         <img src="assets/img/shop011.jpg">
+         <table style="width:100%">
+           <tr>
+             <td>
+               <img src="assets/img/shop022.jpg">
+             </td>
+             <td>
+               <p class="formwork_titleleft2"><b>产品参数</b>
+                产 地：瑞士 <br>
+                品 牌：天梭 TISSOT <br>
+                款 式：男款  <br>
+                机 芯：自动机械机芯 <br> 
+                尺 寸：表壳直径约39.3mm（由于生产批次以及测量方式不同，具体尺寸请以实物为准，页面注明尺寸仅供参考）<br>
+                表 面：其他  <br>
+                表 壳：精钢 <br>
+              </p>
+             </td>
+           </tr>
+         </table>
+         <img src="assets/img/shop033.jpg">
+         <img src="assets/img/shop044.jpg">
+         <img src="assets/img/shop055.jpg">
+
+        </ion-list>
+        <ion-list *ngSwitchCase="1">
+          <table border="1" cellpadding="10" class="tableshop">
+            <tr >
+              <td colspan="2"><b>主体</b></td>
+            </tr>
+            <tr>
+              <td>商品型号</td>
+              <td>T41.1.483.53</td>
+            </tr>
+            <tr>
+              <td>显示类别</td>
+              <td>机械</td>
+            </tr>
+            <tr>
+              <td>机芯类别</td>
+              <td>机械（自动）</td>
+            </tr>
+            <tr>
+              <td>品牌属性</td>
+              <td>瑞士品牌</td>
+            </tr>
+            <tr>
+              <td colspan="2"><b>规格参数</b></td>
+            </tr>
+            <tr>
+              <td>表盘颜色</td>
+              <td>黑色</td>
+            </tr>
+            <tr>
+              <td>表带颜色</td>
+              <td>银色</td>
+            </tr>
+            <tr>
+              <td>表镜材质</td>
+              <td>其他</td>
+            </tr>
+            <tr>
+              <td>表扣类型</td>
+              <td>蝴蝶型</td>
+            </tr>
+            <tr>
+              <td>表盘尺寸</td>
+              <td>约39.3mm</td>
+            </tr>
+            <tr>
+              <td>表壳类型</td>
+              <td>圆形</td>
+            </tr>
+            <tr>
+              <td>防水功能</td>
+              <td>30米</td>
+            </tr>
+            <tr>
+              <td>夜光功能</td>
+              <td>否</td>
+            </tr>
+            <tr>
+              <td>日期显示</td>
+              <td>是</td>
+            </tr>
+          </table>
+          
+        </ion-list>
+        <ion-list *ngSwitchCase="2">
+          <div class="divmargin">
+            <p>包装清单</p>
+            <p>手表×1 表盒×1 说明书×1 保修卡×1吊牌×1</p>
+          </div>
+          <dd>
+            <span style="font-weight:bold;">一、 售后服务指引：</span><br>
+            1. 如您需要对商品申请售后服务，可直接在线提交售后服务单。<br>
+            2. 网站上展示的商品图片因拍摄灯光及不同显示器色差等原因，可能造成商品图片与实物有一定色差，不属质量问题，对此请您予以理解。<br>
+            3. 您购买的是石英表，购买时的电池是作为检测机芯的运行和性能之用，因手表在装配时已装上电池，故表内电池之寿命可能会比说明书介绍的要短。<br><br>
+            <span style="font-weight:bold;">二、商品维修注意事项：</span><br>
+            1、 自商品售出之日（以商品实际签收日期为准）起计算，二年内可享受京东保修等三包服务。<br>
+            普通情况维修周期：1-2个月左右。（无需订购配件，例如：消磁，校对）<br>
+            特殊情况维修周期：3个月左右。（需要订购配件，例如：所有外观件，内部机芯零配件等）<br>
+            以上维修周期为自京东收到退回商品之日起计算。<br>
+            2、 以下情况不属于免费保修服务范围：<br>
+            （1） 任何非京东自营销售商出售的商品；<br>
+            （2） 保修卡缺失或发票不完整;<br>
+            （3） 手表外观件（表壳、表玻璃、表把、表带及外观固定件等）人为损坏；<br>
+            （4） 由任何未经授权的人士拆动过的手表(例如：更换电池、提供保养服务和维修等)；<br>
+            （5） 正常的磨损和老化(例如：表面的刮损、颜色的改变或非金属材料如皮质、纤维质和橡皮胶质的表带或表链的改变等)；<br>
+            （6） 因火灾、其他自然灾害等不可抗力而引起手表损坏；<br>
+          </dd>
+        </ion-list>
+     </div>
+  </ion-list>
+  <ion-list *ngSwitchCase="2">
+    <ion-segment [(ngModel)]="evaluate" >
+      <ion-segment-button value="0" >
+        全部
+      </ion-segment-button>
+      <ion-segment-button value="1" >
+        好评
+      </ion-segment-button>
+      <ion-segment-button value="2" >
+        中评
+      </ion-segment-button>
+      <ion-segment-button value="3" >
+        差评
+      </ion-segment-button>
+      <ion-segment-button value="4" >
+        有图
+      </ion-segment-button>
+    </ion-segment>
+     <div [ngSwitch]="evaluate">
+       <ion-list *ngSwitchCase="0">
+         <ion-card >
+           <ion-item>
+              <ion-avatar item-left class="imgqa">
+              <img class="img" src="assets/img/bit.png">
+              </ion-avatar>
+              太***兄 
+              <span class="textdat">2017-01-23</span>
+           </ion-item>
+          <hr>
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png"> <br>
+          <p>整体感觉不错！京东自营的应该是正品！看包装是真的！比专柜便宜几百块！</p>
+          <p>购买日期：2016-12-12</p>
+         </ion-card>
+         <ion-card >
+           <ion-item>
+              <ion-avatar item-left class="imgqa">
+              <img class="img" src="assets/img/bit.png">
+              </ion-avatar>
+              太***兄 
+              <span class="textdat">2017-01-23</span>
+           </ion-item>
+          <hr>
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png"> <br>
+          <p>整体感觉不错！京东自营的应该是正品！看包装是真的！比专柜便宜几百块！</p>
+          <p>购买日期：2016-12-12</p>
+         </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="1">
+          <ion-card >
+           <ion-item>
+              <ion-avatar item-left class="imgqa">
+              <img class="img" src="assets/img/bit.png">
+              </ion-avatar>
+              太***兄 
+              <span class="textdat">2017-01-23</span>
+           </ion-item>
+          <hr>
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png"> <br>
+          <p>整体感觉不错！京东自营的应该是正品！看包装是真的！比专柜便宜几百块！</p>
+          <p>购买日期：2016-12-12</p>
+         </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="2">
+          <ion-card >
+           <ion-item>
+              <ion-avatar item-left class="imgqa">
+              <img class="img" src="assets/img/bit.png">
+              </ion-avatar>
+              太***兄 
+              <span class="textdat">2017-01-23</span>
+           </ion-item>
+          <hr>
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png"> <br>
+          <p>整体感觉不错！京东自营的应该是正品！看包装是真的！比专柜便宜几百块！</p>
+          <p>购买日期：2016-12-12</p>
+         </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="3">
+          <ion-card >
+           <ion-item>
+              <ion-avatar item-left class="imgqa">
+              <img class="img" src="assets/img/bit.png">
+              </ion-avatar>
+              太***兄 
+              <span class="textdat">2017-01-23</span>
+           </ion-item>
+          <hr>
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png"> <br>
+          <p>整体感觉不错！京东自营的应该是正品！看包装是真的！比专柜便宜几百块！</p>
+          <p>购买日期：2016-12-12</p>
+         </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="4">
+          <ion-card >
+           <ion-item>
+              <ion-avatar item-left class="imgqa">
+              <img class="img" src="assets/img/bit.png">
+              </ion-avatar>
+              太***兄 
+              <span class="textdat">2017-01-23</span>
+           </ion-item>
+          <hr>
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png">
+          <img class="imgxing" src="assets/img/ape.png"> <br>
+          <p>整体感觉不错！京东自营的应该是正品！看包装是真的！比专柜便宜几百块！</p>
+          <p>购买日期：2016-12-12</p>
+         </ion-card>
+        </ion-list>
+     </div>
+  </ion-list>
+</div>
+</ion-content>
+<ion-footer>
+  <ion-row center> 
+    <ion-col class="rol" (click)="follow()">
+     <img [hidden]="imghidden ==1" class="imgfor" src="assets/img/cartcart4.png">
+     <img [hidden]="imghidden ==0" class="imgfor" src="assets/img/cartcart5.png">
+     <p class="pfor">{{follows}}</p>
+    </ion-col>
+    <ion-col class="rol" (click)="follow()">
+      
+      <img class="imgfor" src="assets/img/agt.png">
+      <ion-badge [hidden]="" class="bage" color="danger">{{numbadge}}</ion-badge>
+     <p class="pfor">购物车</p>
+    </ion-col>
+    <ion-col style="background-color: #ffff00;padding-left: 15px">
+        <p (click)="join()">加入购物车</p>
+    </ion-col>
+    <ion-col style="background-color: #f53d3d;padding-left: 15px ">
+        <p (click)="shopcart({charNum: 0})">立即购买</p>
+    </ion-col>
+
+  </ion-row>
+</ion-footer>

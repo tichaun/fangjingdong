@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar [color]="isAndroid ? 'secondary' : 'danger'">
+    <ion-title>
+      购物车
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page-contact">
+  <ion-item>
+      <ion-label>京东自营</ion-label>
+      <ion-checkbox color="danger" [(ngModel)]="selects" (ionChange)="onch($event)"></ion-checkbox>
+    </ion-item>
+      <ion-row center *ngFor="let item of shoprow;let i = index">
+        <table>
+          <tr>
+            <td class="tdcen">
+              <ion-checkbox color="danger" [(ngModel)]="item.dis" (ionChange)="onchange($event,i)"></ion-checkbox>
+            </td>
+            <td class="colcen">
+                <img [src]="item.img">
+            </td>
+            <td>
+              <p>{{item.text}}</p>
+              <p class="pics">￥：{{item.pcis}}</p>
+            </td>
+          </tr>
+        </table>
+      </ion-row>     
+</ion-content>
+<ion-footer>
+  <table class="tabfor">
+    <tr>
+      <td>
+        <ion-checkbox color="danger" [(ngModel)]="selects"></ion-checkbox><span> 全选</span>
+      </td>
+      <td>
+        合计:{{price}}
+      </td>
+      <td class="tdfor">
+        去结算({{settlement}})
+      </td>
+    </tr>
+  </table>
+</ion-footer>

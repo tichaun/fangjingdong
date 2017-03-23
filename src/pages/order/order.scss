@@ -1,0 +1,95 @@
+page-order {
+    .rol{
+        text-align: center;
+    }
+    .imgfor{
+        width: 30px;
+        height: 30px;
+    }
+    .pfor{
+        margin: 0px;
+        padding: 0px;   
+    }
+    .pshop{
+        color: red;
+    }
+    .spanfol{
+        float: left;
+        font-size: 25px;
+    }
+    .itemleft{
+        padding-left: 0px;
+    }
+    .spanback{
+        background-image: url(../assets/img/amm.png);
+        background-size: cover;
+        color: #fff;
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        /* border-color: #387ef5; */
+        opacity: 1;
+        color: red;
+    }
+    .segment-md .segment-button {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        /* padding: 0 6px; */
+        width: 0;
+        height: 4.2rem;
+        /* border-bottom-width: 2px; */
+        /* border-bottom-style: solid; */
+        /* border-bottom-color: rgba(0, 0, 0, 0.1); */
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 4rem;
+        text-transform: uppercase;
+        color: #000;
+        background-color: transparent;
+        opacity: 0.7;
+        transition: 100ms all linear;
+    }
+    .segment-md .segment-button.segment-activated {
+        /* border-color: #387ef5; */
+        opacity: 1;
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        /* border-color: #387ef5; */
+        opacity: 1;
+    }
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        border-color: red;
+        opacity: 1;
+    }
+    .bage{
+        position: absolute;
+        padding: 0px;
+    }
+    .formwork_titleleft2 {
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .tableshop{
+        width: 100%;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        background-color: #eee;
+    
+    }
+    .divmargin{
+        margin-top: 20px;
+    }
+    .imgqa{
+        width: 30px;
+        float: left;
+    }
+    .textdat{
+        float: right;
+    }
+    .imgxing{
+        width: 15px;
+        float: left;
+    }
+ 
+
+}

@@ -1,0 +1,107 @@
+<ion-header>
+
+  <ion-navbar [color]="isAndroid ? 'secondary' : 'danger'">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar (click)="searchclick()"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="page-about">
+  <div class="leftdiv">
+    <ion-list >
+      <ion-item *ngFor="let item of shoplist;let i = index"  (click)="itemclick(i)">
+        <p [ngClass]='{itemcss: itemindex == i}'>{{item.shop}}</p>
+      </ion-item>  
+    </ion-list>
+  </div>
+  <div class="regdiv">
+    <div [ngSwitch]="itemindex">
+      <ion-list *ngSwitchCase="0">
+        <h4 class="titletext">热销商品</h4>
+          <ion-row center>
+          <ion-col (click)="shopclick()">
+            <img src="assets/img/biao1.jpg">
+            <p><b>手表</b></p>
+          </ion-col>
+          <ion-col (click)="shopclick()">
+            <img src="assets/img/biao1.jpg">
+            <p><b>手表</b></p>
+          </ion-col>
+          <ion-col (click)="shopclick()">
+            <img src="assets/img/biao1.jpg">
+            <p><b>手表</b></p>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+      <ion-list *ngSwitchCase="1">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="2">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="3">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="4">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="5">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="6">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="7">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="8">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()">
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="9">
+        <ion-item *ngFor="let item of shoprow" class="itemcol" (click)="shopclick()"> 
+          <img [src]="item.img">
+          <p><b>{{item.text}}</b></p>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+  
+
+  
+
+  
+  </div>
+ 
+</ion-content>

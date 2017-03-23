@@ -1,0 +1,46 @@
+page-tatost {
+    ion-content.content-ios,ion-content.content-md{
+        background-color: rgba(0, 0, 0, 0.28);
+    }
+    ion-content{
+        .content{
+            z-index: 20;
+            width: 100%;
+            height: 50%;
+            background-color: #fff;
+            position: fixed;
+            bottom: 0px;
+            overflow: scroll;
+        }
+        .div1{
+            width: 100%;
+            word-wrap:break-word;
+            word-break:normal;
+        }
+        .butqaz{
+            float: left;
+        }
+        .pshop{
+            color: red;
+        }
+        ion-col{
+            height: 50px;
+            text-align: center;
+        }
+        .colback{
+            background-color: red;
+            color: #fff;
+            padding-top: 15px;
+        }
+        .colleft{
+            background-color:	#AFEEEE;
+            color: #fff;
+            padding-top: 15px;
+        }
+        .itembutcss{
+            color: red;
+            border-color: red;
+        }
+        
+    }
+}

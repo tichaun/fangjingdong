@@ -1,0 +1,122 @@
+<ion-header>
+
+  <ion-navbar [color]="isAndroid ? 'secondary' : 'danger'">
+    <ion-title>我的</ion-title>
+    
+       <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </button>
+    </ion-buttons>
+   
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="page-personal">
+    <ion-item no-lines class="divcen">
+          <ion-avatar item-left>
+            <img class="img" src="assets/img/bit.png">
+        </ion-avatar> 
+        <h2>{{username}}</h2> 
+         
+        <button ion-button clear color="light" item-right>账户管理></button>  
+    </ion-item>
+    <ion-card >
+      <ion-row center>
+          <ion-col class="ioncol">
+            <img src="assets/img/bkm.png">
+            <p class="psize">待付款</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <img src="assets/img/bkj.png">
+            <p class="psize">待收货</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <img src="assets/img/apf.png">
+            <p class="psize">待评价</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <img src="assets/img/bg4.png">
+            <p class="psize">返修/退款</p>
+          </ion-col>
+           <ion-col class="ioncol">
+            <img src="assets/img/axa.png">
+            <p class="psize">我的订单></p>
+          </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card >
+      <ion-row center>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">京豆</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">优惠券</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">白条</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">京东金库</p>
+          </ion-col>
+           <ion-col class="ioncol">
+            <img src="assets/img/ayc.png">
+            <p class="psize">我的钱包></p>
+          </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-row center class="roelin">
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">商品关注</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">店铺关注</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">浏览记录</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">客服服务</p>
+          </ion-col>
+        </ion-row>
+        <ion-row center>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">我的活动</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">京东超市</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">服装城</p>
+          </ion-col>
+          <ion-col class="ioncol">
+            <h5>56</h5>
+            <p class="psize">领京豆</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <img class="imgright" src="assets/img/movie_home_movie_txetmark.png" alt="">
+          </ion-col>
+          <ion-col >
+           为你推荐
+          </ion-col>
+          <ion-col >
+           <img class="imgleft" src="assets/img/movie_home_show_txetmark.png" alt="">
+          </ion-col>
+        </ion-row>
+        <!--<button ion-button (click)="networkss()">网络类型</button>-->
+</ion-content>

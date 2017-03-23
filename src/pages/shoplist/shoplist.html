@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-searchbar (click)="searchclick()"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only [hidden]="indexhide==1" (click)="listclick()">
+        <ion-icon name="apps"></ion-icon>
+      </button>
+      <button ion-button icon-only [hidden]="indexhide==0" (click)="gridclick()">
+        <ion-icon name="list"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div [ngSwitch]="itemindex">
+      <ion-list *ngSwitchCase="0">
+        <ion-item *ngFor="let item of shoprow" (click)="commodity_click()">
+          <ion-thumbnail item-left>
+          <img [src]="item.img">
+        </ion-thumbnail>
+        <h2 class="pics">￥：7888</h2>
+        <p><b>1111</b></p>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="1">
+        <ion-item *ngFor="let item of shoprow" class="itemgird" (click)="commodity_click()">
+          <img [src]="item.img">
+          <h2 class="pics">￥：7888</h2>
+          <p><b>1111</b></p>
+        </ion-item>
+      </ion-list>
+  </div>
+
+</ion-content>
+
+

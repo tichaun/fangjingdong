@@ -1,0 +1,35 @@
+page-personal {
+    .divcen{
+       padding-top: 20px;
+       padding-bottom: 20px;
+        background-image: url(../assets/img/bij.png);
+    }
+    .item-md ion-avatar ion-img, .item-md ion-avatar img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .ioncol{
+        text-align: center;
+    }
+    ion-col img{
+        width: 25px;
+        height: 20px;
+        display: inline;
+    }
+    .psize{
+        color: #000;
+        font-size:12px; 
+    }
+    .roelin{
+        border-bottom: 1px solid #757575;
+    }
+    .imgleft{
+        float: left;
+    }
+    .imgright{
+        float: right;
+    }
+
+}

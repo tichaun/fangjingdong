@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar [color]="isAndroid ? 'secondary' : 'danger'">
+    <button ion-button icon-only menuToggle (click)="scans() ">
+      <ion-icon name="qr-scanner"></ion-icon>
+    </button>
+    <ion-searchbar (click)="searchclick()"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-home">
+  <ion-slides #mySlider autoplay="2000"
+                        initialSlide="0"
+                        pager="true"
+                        loop="true"
+                     	  speed="300"  style="width: 100%;height:200px">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image">
+    </ion-slide>
+</ion-slides>
+  <ion-row center>
+    <ion-col (click)="shoplistclick()"><div>京东超市</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>全球购</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>服装城</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>京东生鲜</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>京东到家</div></ion-col>
+  </ion-row>
+  <ion-row center>
+    <ion-col (click)="shoplistclick()"><div>充值中心</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>领京豆</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>领券</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>会赚钱</div></ion-col>
+    <ion-col (click)="shoplistclick()"><div>全部</div></ion-col>
+  </ion-row>
+  <div style="text-align: center">
+    <img src="assets/img/ba_.png">
+  </div>
+    
+  
+  <ion-row center>
+    <ion-col class="bor" (click)="orderclick()">
+      <img src="assets/img/biao1.jpg">
+      <h3>￥：2888</h3>
+      <p>瑞士名表你知得拥有，采用高端技术，纯手工而成</p>
+    </ion-col>
+    <ion-col (click)="orderclick()">
+      <img src="assets/img/biao1.jpg">
+      <h3>￥：2888</h3>
+      <p>瑞士名表你知得拥有，采用高端技术，纯手工而成</p>
+    </ion-col>
+    
+  </ion-row>
+  
+</ion-content>

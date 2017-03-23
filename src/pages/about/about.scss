@@ -1,0 +1,32 @@
+page-about {
+    .leftdiv{
+        width: 25%;
+        float: left;
+        height:100%;
+        overflow-y: auto;
+        border: 1px solid #eee;
+    }
+    .regdiv{
+        width: 75%;
+        float: right;
+        height:100%;
+        overflow-y: auto;
+        border-left: 2px solid #ddd;
+    }
+    .itemcss{
+        color: red;
+    }
+    ion-col{
+        text-align: center;
+    }
+    .titletext{
+        padding-left : 10px;
+        background-color: #ddd;
+    }
+    .itemcol{
+        width:33.33%;
+        float:left;
+        text-align: center;
+    }
+
+}

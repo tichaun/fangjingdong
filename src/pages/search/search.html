@@ -1,0 +1,37 @@
+<!--
+  Generated template for the Search page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-searchbar [(ngModel)]="searchcvalue"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="searchclick()">
+        搜索
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card >
+    <ion-card-header>
+      历史搜索
+    </ion-card-header>
+    <ion-list>
+      <ion-item *ngFor="let item of searchs">
+        {{item}}
+      </ion-item>  
+
+    </ion-list>
+  </ion-card>
+  <p>
+    <button ion-button color="secondary" full (click)="shoe()">清空历史搜索记录</button>
+  </p>
+  <!--<button ion-button (click)="shoe()">shuju</button>-->
+</ion-content>
